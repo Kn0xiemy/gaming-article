@@ -1,0 +1,13 @@
+.nav-container {
+  border: 1px solid red;
+}
+
+nav ul  {
+  display: flex;
+  list-style-type: none;
+  justify-content: end;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
