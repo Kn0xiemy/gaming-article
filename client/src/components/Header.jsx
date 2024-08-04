@@ -8,7 +8,7 @@ function Header() {
     <>
     <header>
       <nav>
-		<h1>Company Name</h1>
+		      <h1>Company Name</h1>
         <ul className='nav-links'>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/">About</Link></li>

@@ -1,0 +1,15 @@
+.footer-container p {
+  color: red;
+
+}
+
+.footer-container {
+  border: 1px solid green;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+}
