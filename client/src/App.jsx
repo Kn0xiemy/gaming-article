@@ -1,8 +1,7 @@
 import React from 'react';
-import Header from './components/Header.jsx';
-import Footer from './components/Footer.jsx'
-import Home from './components/pages/Home.jsx';
+import Home from './components/Home/Home.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AboutPage from './components/About/About.jsx';
 
 function App() {
 
@@ -10,6 +9,7 @@ function App() {
       <>
         <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/about' element={<AboutPage />} />
         </Routes>
       </>
   );

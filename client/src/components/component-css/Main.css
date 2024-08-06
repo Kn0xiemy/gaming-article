@@ -1,0 +1,45 @@
+
+.main-container {
+  background-color: olive;
+}
+.article-container {
+  border: 1px solid blue;
+  height: 850px;
+  margin: 10rem 15rem;
+}
+
+.welcome-section h2 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+}
+
+.section-title  {
+  color: beige;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.50rem;
+  align-items: center;
+}
+
+
+.image-wrap {
+  height: 7rem;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 0.50rem;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrap img {
+  max-width:100%;
+  max-height:100%;
+}
+
+/* Animating fire icon for the future */

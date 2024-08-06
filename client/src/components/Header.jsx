@@ -11,7 +11,7 @@ function Header() {
 		      <h1>Company Name</h1>
         <ul className='nav-links'>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/">About</Link></li>
+          <li><Link to="/about">About</Link></li>
           <li><Link to="/">Login</Link></li>
           <li><Link to="/">Create Article</Link></li>
           <li><Link to="/">Logout</Link></li>
