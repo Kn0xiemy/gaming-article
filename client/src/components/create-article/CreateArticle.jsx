@@ -7,11 +7,16 @@ export default function CreateArticle() {
           <label htmlFor="title">Title</label>
           <input type="text" name="title"/>
 
-          <label htmlFor="password">Password</label>
-          <input type="password" />
+          <label htmlFor="genre">Genre</label>
+          <input type="text" />
+
+          <label htmlFor="article-image">Image URL</label>
+          <input type="text" />
+
+          <label htmlFor="description">Description</label>
+          <textarea name="description" id="" placeholder="Content for article.."></textarea>
 
           <input type="submit" name="" id="submit-button" />
-          <p>Don't have an account yet?</p><Link to="/register" className='register-suggestion'>Register</Link>
         </div>
       </form>
     </div>

@@ -13,8 +13,8 @@ export default function MainSection() {
               {/* To place dynamic image value above for later */}
             </div>
             {/* To place dynamic title for later */}
-            <h3>Incredible News!</h3>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, doloribus!</p>
+            <h3>Incredible News!</h3> 
+			        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, doloribus!</p>
             <div className="details-button">
               {/* To place dynamic button value later */}
               <button>Details</button>

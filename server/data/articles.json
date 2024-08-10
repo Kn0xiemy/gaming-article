@@ -1,0 +1,16 @@
+{
+  "3cd5e529-da74-4dee-bf8e-a41049a9b05d": {
+      "title": "Crysis 3",
+      "genre": "FPS",
+      "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202109/1518/PQbJo2xmwHkkhaHmpBH0sD5q.png",
+      "description": "Pushing hardare to the limit of 2013 technology.",
+      "_id": "3cd5e529-da74-4dee-bf8e-a41049a9b05d"
+  },
+  "65b07ed8-1ae0-4076-b2bf-e8c333fa7f1d": {
+      "title": "Heroes of Might and Magic 3",
+      "genre": "Turn-Based Strategy",
+      "imageUrl": "https://cdn2.unrealengine.com/heroes-iii-complete-epic-edition-capsule-hero-carrousel-1920x1080-1920x1080-8dbed88694f1.jpg",
+      "description": "Timeless classic with tons of content.",
+      "_id": "65b07ed8-1ae0-4076-b2bf-e8c333fa7f1d"
+  }
+}
