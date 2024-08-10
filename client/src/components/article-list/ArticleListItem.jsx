@@ -10,13 +10,13 @@ export default function ArticleListItem({
   return (
     <div className="article-list">
       <div className="article">
-        <img src={imageUrl} alt="image-holder" />
+        <img src={imageUrl}/>
         <h3>{title}</h3>
         <h4>{genre}</h4>
         <p>{description}</p>
         <div className="details-button">
           <Link to={`/articles/${_id}/details`} className="details-button">
-            Details
+            Read
           </Link>
         </div>
       </div>

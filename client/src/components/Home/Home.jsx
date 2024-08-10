@@ -15,10 +15,6 @@ export default function Home() {
   return (
     <>
         <MainSection></MainSection>
-        {latestArticles.length > 0
-                ? latestArticles.map(article => <LatestArticle key={article._id}{...article}/>)
-                : <p className="no-articles">No articles yet</p>
-            }
     </>
   )
 }

@@ -27,6 +27,36 @@
   align-items: center;
 }
 
+.article img {
+  height: 7rem;
+  border-radius: 1rem;
+  box-shadow: 18px 10px 20px 6px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+  width: 18rem;
+}
+
+.article h3 {
+  font-weight: 900;
+  font-size: 1.55rem;
+}
+
+.article h4 {
+  font-style: italic;
+}
+
+.article p {
+  font-style: italic;
+}
+
+.details-button {
+  background-color:aqua;
+  text-decoration: none;
+  border-radius: 0.50rem;
+  padding: 0.75rem;
+  color: #fff;
+  font-weight: 700;
+
+}
 
 .image-wrap {
   height: 7rem;
@@ -41,5 +71,19 @@
   max-width:100%;
   max-height:100%;
 }
+
+.no-articles {
+  text-align: center;
+}
+
+.no-articles {
+  text-align: center;
+  margin-top: 30rem;
+}
+
+.section-title {
+  color: black;
+}
+
 
 /* Animating fire icon for the future */
