@@ -1,6 +1,6 @@
 import * as request from './requester';
 
-const BASE_URL = 'http://localhost:3030/data/articles'
+const BASE_URL = 'http://localhost:3030/jsonstore/articles'
 
 export const getAll = async () => {
   const result = await request.get(BASE_URL);
@@ -9,3 +9,16 @@ export const getAll = async () => {
 
   return articles;
 }
+
+export const getOne = (articleId) => request.get(`${BASE_URL}/${articleId}`);
+
+export const create = (articleData) => request.post(`${BASE_URL}`, articleData);
+
+
+const articlesAPI = {
+  getAll,
+  getOne,
+  create
+}
+
+export default articlesAPI;
