@@ -13,7 +13,6 @@ export default function Register() {
   const navigate = useNavigate();
 
   const registerHandler = async (values) => {
-    // REGISTER IS NOT A FUNCTION AND IS NOT WORKING
     if (values.password !== values["confirm-password"]) {
       return setError("Password Mismatch!");
     }

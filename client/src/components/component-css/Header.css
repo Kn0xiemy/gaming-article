@@ -9,16 +9,19 @@
   background-color: red;
  }
 
- .nav-links {
+ .nav-links,
+ .logged-user,
+ .guest-user {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  gap:  2rem;
+  gap: 2rem;
   font-size: 1.25rem;
   animation: fadeInFromTop 0.75s ease-in-out;
  }
  
  .nav-links a {
+
   text-decoration: none;
   color: #fff;
   transition: all 0.75s ease-in-out;

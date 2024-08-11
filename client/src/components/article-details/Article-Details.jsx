@@ -34,12 +34,11 @@ export default function ArticleDetails() {
         <div className="article-header">
           <img className="article-img" src={article.imageUrl} />
           <h1>{article.title}</h1>
-          <span className="levels">Historic Impact: </span>
-          {/* {game.maxLevel} */}
+          
           <p className="type">{article.genre}</p>
         </div>
 
-        <p className="text">{article.summary}</p>
+        <p className="text">{article.description}</p>
         <div className="details-comments">
           <h2>Comments:</h2>
 
