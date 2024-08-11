@@ -14,8 +14,20 @@ export default function Register() {
 
   const registerHandler = async (values) => {
     if (values.password !== values["confirm-password"]) {
-      return setError("Password Mismatch!");
+      return setError("Password fields do not match!");
     }
+
+    if (!values.email) {
+      alert('Please fill the email field!');
+     
+    }
+
+    if (!values.password) {
+      alert('Please fill out the password field!')
+    }
+
+    
+
     try {
       await register(values.email, values.password);
       navigate("/");
@@ -57,7 +69,7 @@ export default function Register() {
             onChange={changeHandler}
           />
           {error && (
-            <p>
+            <p style={{marginBottom: 10, color: 'red', fontWeight: 900}}>
               <span>{error}</span>
             </p>
           )}
