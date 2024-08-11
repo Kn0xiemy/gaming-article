@@ -1,7 +1,8 @@
 import { useGetOneArticle } from "../../hooks/useArticles";
 import { useParams } from "react-router-dom";
 import commentsAPI from "../api/comments-api";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import articlesAPI from "../api/articles-api";
 
 export default function ArticleDetails() {
   const { articleId } = useParams();
@@ -15,7 +16,6 @@ export default function ArticleDetails() {
     const newComment = await commentsAPI.create(articleId, username, comment);
 
     setArticle((prevState) => ({
-      // To be reworked
       ...prevState,
       comments: {
         ...prevState.comments,
@@ -27,6 +27,13 @@ export default function ArticleDetails() {
     setComment("");
   };
 
+  useEffect(() => {
+    (async () => {
+      const result = await articlesAPI.getOne(articleId);
+      setArticle(result);
+    })();
+  },[]);
+
   return (
     <section id="article-details">
       <h1>Article Details</h1>
@@ -34,7 +41,7 @@ export default function ArticleDetails() {
         <div className="article-header">
           <img className="article-img" src={article.imageUrl} />
           <h1>{article.title}</h1>
-          
+
           <p className="type">{article.genre}</p>
         </div>
 
@@ -52,7 +59,7 @@ export default function ArticleDetails() {
                 </li>
               ))
             ) : (
-              <p className="no-comment">No comments.</p>
+              <p className="no-comment">No comments yet.</p>
             )}
           </ul>
         </div>
@@ -67,7 +74,7 @@ export default function ArticleDetails() {
         </div>
       </div>
 
-      {/* <article className="create-comment">
+      <article className="create-comment">
         <label>Add new comment:</label>
         <form className="form" onSubmit={commentSubmitHandler}>
           <input
@@ -85,7 +92,7 @@ export default function ArticleDetails() {
           ></textarea>
           <input className="btn submit" type="submit" value="Add Comment" />
         </form>
-      </article> */}
+      </article>
     </section>
   );
 }

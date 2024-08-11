@@ -25,20 +25,18 @@ export default function Register() {
     if (!values.password) {
       alert('Please fill out the password field!')
     }
-
     
-
     try {
       await register(values.email, values.password);
       navigate("/");
     } catch (error) {
-      console.log(error.message);
+      setError(error.message)
     }
   };
-  const { values, changeHandler, submitHandler } = useForm(
-    initialValues,
-    registerHandler
-  );
+      const { values, changeHandler, submitHandler } = useForm(
+      initialValues,
+      registerHandler
+    );
 
   return (
     <div className="form-container">
