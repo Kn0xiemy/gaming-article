@@ -9,6 +9,7 @@ import CreateArticle from "./components/create-article/CreateArticle.jsx";
 import ArticleList from "./components/article-list/Article-List.jsx";
 import { useState } from "react";
 import { AuthContext } from './contexts/AuthContext.js';
+import ArticleDetails from "./components/article-details/Article-Details.jsx";
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/articles/:gameId/details" element={<ArticleDetails />} />
           <Route path="/create-article/create" element={<CreateArticle />} />
         </Routes>
         <Footer></Footer>

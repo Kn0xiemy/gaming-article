@@ -26,7 +26,10 @@ export function useGetOneArticle(articleId) {
     })()
   }, [articleId])
   
-  return [article, setArticle]
+  return [
+    article, 
+    setArticle,
+  ]
 }
 
 export function useCreateArticle() {

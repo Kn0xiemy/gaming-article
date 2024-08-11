@@ -85,5 +85,18 @@
   color: black;
 }
 
+.empty  {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty img {
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  margin-top: 25rem;
+  margin-left: 77.5rem;
+}
+
 
 /* Animating fire icon for the future */
