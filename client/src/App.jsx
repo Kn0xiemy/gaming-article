@@ -7,8 +7,26 @@ import Footer from "./components/Footer.jsx";
 import Register from "./components/register/Register.jsx";
 import CreateArticle from "./components/create-article/CreateArticle.jsx";
 import ArticleList from "./components/article-list/Article-List.jsx";
+import { useState } from "react";
 
 function App() {
+
+  const [authState, setAuthState] = useState({});
+
+  const changeAuthState = (state) => {
+    //fix by implementing persisted authState
+    localStorage.setItem('accessToken', state.accessToken)
+    setAuthState(state);
+  }
+
+  const contextData = { 
+    userId: authState._id,
+    email: authState.email,
+    accessToken: authState.accessToken,
+    isAuthenticated: !!authState.email,
+    changeAuthState,
+  }
+
   return (
     <>
       <div id="global-container">
