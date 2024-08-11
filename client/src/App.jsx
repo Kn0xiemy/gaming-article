@@ -8,6 +8,7 @@ import Register from "./components/register/Register.jsx";
 import CreateArticle from "./components/create-article/CreateArticle.jsx";
 import ArticleList from "./components/article-list/Article-List.jsx";
 import { useState } from "react";
+import { AuthContext } from './contexts/AuthContext.js';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
   }
 
   return (
+    <AuthContext.Provider value={contextData}>
     <>
       <div id="global-container">
         <Header></Header>
@@ -41,6 +43,7 @@ function App() {
         <Footer></Footer>
       </div>
     </>
+    </AuthContext.Provider>
   );
 }
 
