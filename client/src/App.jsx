@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { AuthContext } from './contexts/AuthContext.js';
+import { AuthContextProvider } from './contexts/AuthContext.js';
 import React from "react";
 import Home from "./components/Home/Home.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -13,24 +12,9 @@ import ArticleDetails from "./components/article-details/Article-Details.jsx";
 
 function App() {
 
-  const [authState, setAuthState] = useState({});
-
-  const changeAuthState = (state) => {
-    //fix by implementing persisted authState
-    localStorage.setItem('accessToken', state.accessToken)
-    setAuthState(state);
-  }
-
-  const contextData = { 
-    userId: authState._id,
-    email: authState.email,
-    accessToken: authState.accessToken,
-    isAuthenticated: !!authState.email,
-    changeAuthState,
-  }
 
   return (
-    <AuthContext.Provider value={contextData}>
+    <AuthContextProvider>
     <>
       <div id="global-container">
         <Header></Header>
@@ -45,7 +29,7 @@ function App() {
         <Footer></Footer>
       </div>
     </>
-    </AuthContext.Provider>
+    </AuthContextProvider>
   );
 }
 
