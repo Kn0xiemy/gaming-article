@@ -1,4 +1,4 @@
-import { AuthContextProvider } from './contexts/AuthContext.js';
+import { AuthContextProvider } from './contexts/AuthContext.jsx';
 import React from "react";
 import Home from "./components/Home/Home.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
